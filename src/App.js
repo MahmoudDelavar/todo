@@ -1,16 +1,18 @@
+import { ToastContainer, toast } from 'react-toastify';
 import Map from './components/map/Map';
+import 'react-toastify/dist/ReactToastify.css';
 
 const handleGetposition = (latlng) => {
   let _location = [latlng.lat, latlng.lng];
-  // formik.setFieldValue('location', _location);
-  // formik.setFieldValue('location_latitude', latlng.lng);
-  // formik.setFieldValue('location_longitude', latlng.lat);
+  console.log('loc', _location);
 };
 
 function App() {
+  const notify = () => toast('Wow so easy !');
   return (
     <div>
-      <p> map </p>
+      <button onClick={notify}>Notify !</button>
+      <ToastContainer />
       <Map
         draggable={true}
         center={{

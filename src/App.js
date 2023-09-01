@@ -1,23 +1,25 @@
-import logo from './logo.svg';
-import './App.css';
+import Map from './components/map/Map';
+
+const handleGetposition = (latlng) => {
+  let _location = [latlng.lat, latlng.lng];
+  // formik.setFieldValue('location', _location);
+  // formik.setFieldValue('location_latitude', latlng.lng);
+  // formik.setFieldValue('location_longitude', latlng.lat);
+};
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <p> map </p>
+      <Map
+        draggable={true}
+        center={{
+          lat: 0,
+          lng: 0,
+        }}
+        onGetPosition={handleGetposition}
+        zoom={15}
+      />
     </div>
   );
 }

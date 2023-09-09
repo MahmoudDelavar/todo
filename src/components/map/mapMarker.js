@@ -28,7 +28,7 @@ const MapMarker = ({ onGetPosition, center }) => {
   );
 
   const toggleDraggable = useCallback(() => {
-    setDraggable(d => !d);
+    setDraggable((d) => !d);
   }, []);
 
   return (
@@ -40,11 +40,11 @@ const MapMarker = ({ onGetPosition, center }) => {
       icon={markerIcon}
     >
       <Popup minWidth={90}>
-        {/* <span onClick={toggleDraggable}>
-            {draggable
-              ? 'Marker is draggable'
-              : 'Click here to make marker draggable'}
-          </span> */}
+        <span onClick={toggleDraggable}>
+          {draggable
+            ? 'Marker is draggable'
+            : 'Click here to make marker draggable'}
+        </span>
       </Popup>
     </MapMarker>
   );

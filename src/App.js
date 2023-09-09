@@ -22,6 +22,7 @@ function App() {
         onGetPosition={handleGetposition}
         zoom={15}
       />
+      {/* <img src={require('./images/leaflet/images/layers-2x.png')} alt='ss' /> */}
     </div>
   );
 }
